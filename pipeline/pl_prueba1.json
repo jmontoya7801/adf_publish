@@ -53,16 +53,44 @@
 							"type": "ParquetReadSettings"
 						}
 					},
-					"enableStaging": false
+					"sink": {
+						"type": "ParquetSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "ParquetWriteSettings"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
 				},
 				"inputs": [
 					{
 						"referenceName": "ds_parquet",
 						"type": "DatasetReference",
 						"parameters": {
-							"Directory": "Gold",
+							"Directory": "gold",
 							"Filename": "clubs.parquet",
-							"Filesystem": "datalake"
+							"Filesystem": "etl"
+						}
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "ds_parquet",
+						"type": "DatasetReference",
+						"parameters": {
+							"Directory": "gold",
+							"Filename": "clubs_out.parquet",
+							"Filesystem": "etl"
 						}
 					}
 				]
