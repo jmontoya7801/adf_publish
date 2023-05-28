@@ -77,8 +77,8 @@
 						"referenceName": "ds_parquet",
 						"type": "DatasetReference",
 						"parameters": {
-							"Directory": "gold",
-							"Filename": "clubs.parquet",
+							"Directory": "bronze",
+							"Filename": "dataPARQUET.parquet",
 							"Filesystem": "etl"
 						}
 					}
@@ -89,7 +89,7 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"Directory": "gold",
-							"Filename": "clubs_out.parquet",
+							"Filename": "data_out.parquet",
 							"Filesystem": "etl"
 						}
 					}
