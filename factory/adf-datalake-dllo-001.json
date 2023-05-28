@@ -1,0 +1,9 @@
+{
+	"name": "adf-datalake-dllo-001",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "69bc7303-69b7-4b0a-bde8-fbc3d71093f7",
+		"tenantId": "62b5bf41-2025-40fe-b410-792f24d8e662"
+	}
+}
