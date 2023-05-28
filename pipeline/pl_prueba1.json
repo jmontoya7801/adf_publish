@@ -15,7 +15,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/etl/prueba_adf"
+					"notebookPath": "/root/prueba_adf"
 				},
 				"linkedServiceName": {
 					"referenceName": "ls_AzureDatabricks",
