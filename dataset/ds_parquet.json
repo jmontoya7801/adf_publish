@@ -2,7 +2,7 @@
 	"name": "ds_parquet",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureDataLakeStorage1",
+			"referenceName": "ls_datalake_dllo",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
