@@ -77,9 +77,9 @@
 						"referenceName": "ds_parquet",
 						"type": "DatasetReference",
 						"parameters": {
-							"Directory": "bronze",
+							"Directory": "root",
 							"Filename": "dataPARQUET.parquet",
-							"Filesystem": "etl"
+							"Filesystem": "raw-zone"
 						}
 					}
 				],
@@ -88,9 +88,9 @@
 						"referenceName": "ds_parquet",
 						"type": "DatasetReference",
 						"parameters": {
-							"Directory": "gold",
+							"Directory": "root/gold",
 							"Filename": "data_out.parquet",
-							"Filesystem": "etl"
+							"Filesystem": "raw-zone"
 						}
 					}
 				]
