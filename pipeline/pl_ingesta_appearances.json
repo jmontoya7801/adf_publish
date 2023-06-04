@@ -1,0 +1,116 @@
+{
+	"name": "pl_ingesta_appearances",
+	"properties": {
+		"activities": [
+			{
+				"name": "cp_raw_to_gold",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "ParquetSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "ParquetReadSettings"
+						}
+					},
+					"sink": {
+						"type": "ParquetSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "ParquetWriteSettings"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "ds_parquet",
+						"type": "DatasetReference",
+						"parameters": {
+							"Directory": {
+								"value": "@variables('path_s')",
+								"type": "Expression"
+							},
+							"Filename": {
+								"value": "@pipeline().parameters.FileName",
+								"type": "Expression"
+							},
+							"Filesystem": {
+								"value": "@variables('container_s')",
+								"type": "Expression"
+							}
+						}
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "ds_parquet",
+						"type": "DatasetReference",
+						"parameters": {
+							"Directory": {
+								"value": "@variables('path_d')",
+								"type": "Expression"
+							},
+							"Filename": {
+								"value": "@pipeline().parameters.FileName",
+								"type": "Expression"
+							},
+							"Filesystem": {
+								"value": "@variables('container_d')",
+								"type": "Expression"
+							}
+						}
+					}
+				]
+			}
+		],
+		"parameters": {
+			"FileName": {
+				"type": "string",
+				"defaultValue": "appearances.csv"
+			}
+		},
+		"variables": {
+			"container_s": {
+				"type": "String",
+				"defaultValue": "raw-zone"
+			},
+			"container_d": {
+				"type": "String",
+				"defaultValue": "gold-zone"
+			},
+			"path_s": {
+				"type": "String",
+				"defaultValue": "root/S8_78"
+			},
+			"path_d": {
+				"type": "String",
+				"defaultValue": "root/S8_78"
+			}
+		},
+		"annotations": []
+	}
+}
