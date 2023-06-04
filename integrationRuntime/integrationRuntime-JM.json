@@ -1,0 +1,6 @@
+{
+	"name": "integrationRuntime-JM",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}
