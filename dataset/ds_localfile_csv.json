@@ -1,0 +1,20 @@
+{
+	"name": "ds_localfile_csv",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_localfile_jm",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "FileServerLocation"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
