@@ -16,14 +16,14 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "ParquetSource",
+						"type": "DelimitedTextSource",
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
 							"recursive": true,
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
-							"type": "ParquetReadSettings"
+							"type": "DelimitedTextReadSettings"
 						}
 					},
 					"sink": {
@@ -47,19 +47,19 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "ds_parquet",
+						"referenceName": "ds_datalake_csv",
 						"type": "DatasetReference",
 						"parameters": {
+							"Container": {
+								"value": "@variables('container_s')",
+								"type": "Expression"
+							},
 							"Directory": {
 								"value": "@variables('path_s')",
 								"type": "Expression"
 							},
-							"Filename": {
+							"FileName": {
 								"value": "@pipeline().parameters.FileName",
-								"type": "Expression"
-							},
-							"Filesystem": {
-								"value": "@variables('container_s')",
 								"type": "Expression"
 							}
 						}
