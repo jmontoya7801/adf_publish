@@ -85,6 +85,47 @@
 						}
 					}
 				]
+			},
+			{
+				"name": "nb-definicion-tablas",
+				"type": "DatabricksNotebook",
+				"dependsOn": [
+					{
+						"activity": "cp_raw_to_gold",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/root/ingesta/nb-definicion-tablas",
+					"baseParameters": {
+						"container": {
+							"value": "@variables('container_d')",
+							"type": "Expression"
+						},
+						"path": {
+							"value": "@variables('path_d')",
+							"type": "Expression"
+						},
+						"tabla": {
+							"value": "@variables('tabla')",
+							"type": "Expression"
+						}
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "ls_AzureDatabricks",
+					"type": "LinkedServiceReference"
+				}
 			}
 		],
 		"parameters": {
@@ -109,8 +150,14 @@
 			"path_d": {
 				"type": "String",
 				"defaultValue": "root/S8_78"
+			},
+			"tabla": {
+				"type": "String",
+				"defaultValue": "appearances"
 			}
 		},
-		"annotations": []
+		"annotations": [
+			"Ingesta"
+		]
 	}
 }
