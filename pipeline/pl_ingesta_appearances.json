@@ -67,7 +67,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "ds_parquet",
+						"referenceName": "ds_parquet_dir",
 						"type": "DatasetReference",
 						"parameters": {
 							"Directory": {
@@ -75,7 +75,7 @@
 								"type": "Expression"
 							},
 							"Filename": {
-								"value": "@concat(variables('tabla'),'.parquet')",
+								"value": "@variables('tabla')",
 								"type": "Expression"
 							},
 							"Filesystem": {
