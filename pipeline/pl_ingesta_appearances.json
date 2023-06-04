@@ -75,7 +75,7 @@
 								"type": "Expression"
 							},
 							"Filename": {
-								"value": "@pipeline().parameters.FileName",
+								"value": "@concat(variables('tabla'),'.parquet')",
 								"type": "Expression"
 							},
 							"Filesystem": {
