@@ -153,7 +153,7 @@
 			},
 			"path_d": {
 				"type": "String",
-				"defaultValue": "tables"
+				"defaultValue": "tables/seccion8_78"
 			}
 		},
 		"annotations": [
