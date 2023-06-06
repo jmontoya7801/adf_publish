@@ -106,7 +106,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/root/ingesta/nb-definicion-tablas",
+					"notebookPath": "/root/ingesta/nb-definir-tablas-ingesta",
 					"baseParameters": {
 						"container": {
 							"value": "@variables('container_d')",
