@@ -1,0 +1,15 @@
+{
+	"name": "ds_odata_ZME_CDS_21_CDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_odata_ZME_CDS_21_CDS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SapEccResource",
+		"schema": [],
+		"typeProperties": {
+			"path": "zme_cds_21"
+		}
+	}
+}
