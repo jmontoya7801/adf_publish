@@ -74,7 +74,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "ds_parquet",
+						"referenceName": "ds_datalake_parquet",
 						"type": "DatasetReference",
 						"parameters": {
 							"Directory": "root",
@@ -85,7 +85,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "ds_parquet",
+						"referenceName": "ds_datalake_parquet",
 						"type": "DatasetReference",
 						"parameters": {
 							"Directory": "root/gold",
