@@ -1,0 +1,20 @@
+{
+	"name": "pq_prueba",
+	"properties": {
+		"type": "WranglingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"name": "ls_datalake_csv_players",
+					"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~>  ls_datalake_csv_players",
+					"dataset": {
+						"referenceName": "ls_datalake_csv_players",
+						"type": "DatasetReference"
+					}
+				}
+			],
+			"script": "section Section1;\r\nshared ls_datalake_csv_players = let AdfDoc = AzureStorage.DataLakeContents(\"https://datalakedllo001.dfs.core.windows.net/raw-zone/root/S8_78/players.csv\"),Csv = Csv.Document(AdfDoc, [Delimiter = \",\", Encoding = TextEncoding.Utf8, QuoteStyle = QuoteStyle.Csv]), PromotedHeaders = Table.PromoteHeaders(Csv, [PromoteAllScalars = true]) in  PromotedHeaders;\r\nshared UserQuery = let Source = #\"ls_datalake_csv_players\",\r\n  #\"Removed columns\" = Table.RemoveColumns(Source, {\"country_of_birth\"}),\r\n  #\"Reordered columns\" = Table.ReorderColumns(#\"Removed columns\", {\"player_id\", \"current_club_id\", \"name\", \"pretty_name\", \"country_of_citizenship\", \"date_of_birth\", \"position\", \"sub_position\", \"foot\", \"height_in_cm\", \"url\", \"market_value_in_gbp\", \"highest_market_value_in_gbp\"}),\r\n  #\"Removed columns 1\" = Table.RemoveColumns(#\"Reordered columns\", {\"url\", \"market_value_in_gbp\", \"highest_market_value_in_gbp\", \"foot\"}) in #\"Removed columns 1\";\r\n",
+			"documentLocale": "en-us"
+		}
+	}
+}
