@@ -79,7 +79,7 @@
 						"parameters": {
 							"Directory": "root",
 							"Filename": "dataPARQUET.parquet",
-							"Filesystem": "raw-zone"
+							"Container": "raw-zone"
 						}
 					}
 				],
@@ -90,7 +90,7 @@
 						"parameters": {
 							"Directory": "root/gold",
 							"Filename": "data_out.parquet",
-							"Filesystem": "raw-zone"
+							"Container": "raw-zone"
 						}
 					}
 				]
