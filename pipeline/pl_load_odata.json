@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy data1",
+				"name": "cp_odata_especifico",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -46,8 +46,73 @@
 						}
 					}
 				]
+			},
+			{
+				"name": "cp_odata_generico",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "ODataSource",
+						"httpRequestTimeout": "00:05:00"
+					},
+					"sink": {
+						"type": "ParquetSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "ParquetWriteSettings"
+						}
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "ds_odata_generico",
+						"type": "DatasetReference",
+						"parameters": {
+							"url": {
+								"value": "@pipeline().parameters.url",
+								"type": "Expression"
+							},
+							"path": {
+								"value": "@pipeline().parameters.path",
+								"type": "Expression"
+							}
+						}
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "ds_datalake_parquet",
+						"type": "DatasetReference",
+						"parameters": {
+							"Directory": "tables/odata/generico",
+							"Container": "gold-zone"
+						}
+					}
+				]
 			}
 		],
+		"parameters": {
+			"url": {
+				"type": "string",
+				"defaultValue": "http://s4h71.sap4practice.com:8071/sap/opu/odata/sap/ZME_CDS_21_CDS/"
+			},
+			"path": {
+				"type": "string",
+				"defaultValue": "zme_cds_21"
+			}
+		},
 		"annotations": []
 	}
 }
