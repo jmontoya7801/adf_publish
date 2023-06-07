@@ -1,0 +1,32 @@
+{
+	"name": "ds_odata_generico",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_odata_generico",
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"url": {
+					"value": "@dataset().url",
+					"type": "Expression"
+				}
+			}
+		},
+		"parameters": {
+			"url": {
+				"type": "string"
+			},
+			"path": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "ODataResource",
+		"schema": [],
+		"typeProperties": {
+			"path": {
+				"value": "@dataset().path",
+				"type": "Expression"
+			}
+		}
+	}
+}
