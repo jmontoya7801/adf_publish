@@ -12,7 +12,7 @@
 			"Filename": {
 				"type": "string"
 			},
-			"Filesystem": {
+			"Container": {
 				"type": "string"
 			}
 		},
@@ -30,7 +30,7 @@
 					"type": "Expression"
 				},
 				"fileSystem": {
-					"value": "@dataset().Filesystem",
+					"value": "@dataset().Container",
 					"type": "Expression"
 				}
 			},
