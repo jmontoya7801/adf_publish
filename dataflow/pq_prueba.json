@@ -8,7 +8,7 @@
 					"name": "ls_datalake_csv_players",
 					"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~>  ls_datalake_csv_players",
 					"dataset": {
-						"referenceName": "ls_datalake_csv_players",
+						"referenceName": "ds_datalake_csv_players",
 						"type": "DatasetReference"
 					}
 				}
