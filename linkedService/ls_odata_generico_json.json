@@ -1,0 +1,7 @@
+{
+	"name": "ls_odata_generico_json",
+	"properties": {
+		"type": "OData",
+		"annotations": []
+	}
+}
