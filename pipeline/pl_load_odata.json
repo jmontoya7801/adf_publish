@@ -15,8 +15,37 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
+					"source": {
+						"type": "SapEccSource",
+						"httpRequestTimeout": "00:05:00"
+					},
+					"sink": {
+						"type": "ParquetSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "ParquetWriteSettings"
+						}
+					},
 					"enableStaging": false
-				}
+				},
+				"inputs": [
+					{
+						"referenceName": "ds_odata_ZME_CDS_21_CDS",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "ds_datalake_parquet",
+						"type": "DatasetReference",
+						"parameters": {
+							"Directory": "tables/odata/ZME_CDS_21_CDS/",
+							"Container": "gold-zone"
+						}
+					}
+				]
 			}
 		],
 		"annotations": []
