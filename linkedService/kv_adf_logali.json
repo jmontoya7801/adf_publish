@@ -1,0 +1,10 @@
+{
+	"name": "kv_adf_logali",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://kvdatalakedllo001.vault.azure.net/"
+		}
+	}
+}
