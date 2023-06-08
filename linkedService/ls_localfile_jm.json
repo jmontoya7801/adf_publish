@@ -5,9 +5,9 @@
 		"annotations": [],
 		"type": "FileServer",
 		"typeProperties": {
-			"host": "C:\\Datos",
-			"userId": "jorge",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIyYjhhNzEwOC1jMDEzLTQzMmMtOWJkZS1lNzZlNmY1YWQ0YmYiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"host": "\\\\LAPTOP-Q2DJPF2L\\Datos\\",
+			"userId": "azure",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI0NTRlYmFmMC0wZjlmLTQ0YjUtOWZjMi02ZWVkY2Q2NzcwM2EiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
 			"referenceName": "integrationRuntime-JM",
