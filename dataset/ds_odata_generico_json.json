@@ -3,10 +3,30 @@
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ls_odata_generico_json",
-			"type": "LinkedServiceReference"
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"url": {
+					"value": "@dataset().path",
+					"type": "Expression"
+				}
+			}
+		},
+		"parameters": {
+			"url": {
+				"type": "string"
+			},
+			"path": {
+				"type": "string"
+			}
 		},
 		"annotations": [],
 		"type": "ODataResource",
-		"schema": []
+		"schema": [],
+		"typeProperties": {
+			"path": {
+				"value": "@dataset().path",
+				"type": "Expression"
+			}
+		}
 	}
 }
