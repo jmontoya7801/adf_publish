@@ -1,0 +1,12 @@
+{
+	"name": "ds_odata_generico_json",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_odata_generico_json",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "ODataResource",
+		"schema": []
+	}
+}
