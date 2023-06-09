@@ -1,8 +1,9 @@
 {
 	"name": "SapTable1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
-		"type": "SapTable",
 		"annotations": [],
+		"type": "SapTable",
 		"typeProperties": {
 			"clientId": "220",
 			"language": "EN",
@@ -10,12 +11,11 @@
 			"userName": "SEMED2321",
 			"server": "s4h71.sap4practice.com",
 			"systemNumber": "71",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI3NmUwMjhkZC1hNjI0LTQ1YjMtYjdiNy0wNDAzNmYyYzhlZDYiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJjMjAwNTkyYS1jZGFjLTQ0OWYtYmJkZi1kMmVhZTUzNjE4MmMiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
-			"referenceName": "integrationRuntimeSAP",
+			"referenceName": "integrationRuntime-JM",
 			"type": "IntegrationRuntimeReference"
 		}
-	},
-	"type": "Microsoft.DataFactory/factories/linkedservices"
+	}
 }
