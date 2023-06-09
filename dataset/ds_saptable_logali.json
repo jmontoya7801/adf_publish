@@ -2,7 +2,7 @@
 	"name": "ds_saptable_logali",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "ls_saptable_logali",
+			"referenceName": "SapTable1",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
