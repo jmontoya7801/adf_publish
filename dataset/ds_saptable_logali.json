@@ -1,0 +1,23 @@
+{
+	"name": "ds_saptable_logali",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_saptable_logali",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"tabla": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "SapTableResource",
+		"schema": [],
+		"typeProperties": {
+			"tableName": {
+				"value": "@dataset().tabla",
+				"type": "Expression"
+			}
+		}
+	}
+}
