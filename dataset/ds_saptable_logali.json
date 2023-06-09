@@ -14,10 +14,7 @@
 		"type": "SapTableResource",
 		"schema": [],
 		"typeProperties": {
-			"tableName": {
-				"value": "@dataset().tabla",
-				"type": "Expression"
-			}
+			"tableName": "SFLIGHT"
 		}
 	}
 }
