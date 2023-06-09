@@ -1,9 +1,8 @@
 {
 	"name": "SapTable1",
-	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
-		"annotations": [],
 		"type": "SapTable",
+		"annotations": [],
 		"typeProperties": {
 			"clientId": "220",
 			"language": "EN",
@@ -17,5 +16,6 @@
 			"referenceName": "integrationRuntimeSAP",
 			"type": "IntegrationRuntimeReference"
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/linkedservices"
 }
