@@ -7,14 +7,18 @@
 		},
 		"parameters": {
 			"tabla": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "SFLIGHT"
 			}
 		},
 		"annotations": [],
 		"type": "SapTableResource",
 		"schema": [],
 		"typeProperties": {
-			"tableName": "SFLIGHT"
+			"tableName": {
+				"value": "@dataset().tabla",
+				"type": "Expression"
+			}
 		}
 	}
 }
