@@ -62,7 +62,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "ODataSource",
-						"query": "$top=5",
+						"query": "$top=5&$filter=Carrid eq 'LH'",
 						"httpRequestTimeout": "00:05:00"
 					},
 					"sink": {
