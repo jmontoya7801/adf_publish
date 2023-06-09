@@ -116,7 +116,7 @@
 		"parameters": {
 			"tabla": {
 				"type": "string",
-				"defaultValue": "appearances"
+				"defaultValue": "SFLIGHT"
 			}
 		},
 		"variables": {
