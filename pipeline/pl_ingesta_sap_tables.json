@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "cp_raw_to_gold",
+				"name": "cp_tabla",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -76,7 +76,7 @@
 				"type": "DatabricksNotebook",
 				"dependsOn": [
 					{
-						"activity": "cp_raw_to_gold",
+						"activity": "cp_tabla",
 						"dependencyConditions": [
 							"Succeeded"
 						]
