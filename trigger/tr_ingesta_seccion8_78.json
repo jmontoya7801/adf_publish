@@ -1,0 +1,36 @@
+{
+	"name": "tr_ingesta_seccion8_78",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pl_ingesta_seccion8_78",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"FileName": "games.csv",
+					"tabla": "games"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 1,
+				"startTime": "2023-06-12T17:37:00Z",
+				"timeZone": "UTC",
+				"schedule": {
+					"minutes": [
+						0
+					],
+					"hours": [
+						18
+					]
+				}
+			}
+		}
+	}
+}
