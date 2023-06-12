@@ -21,7 +21,7 @@
 						"message": "This is a custom dynamic message from your pipeline with run ID @{pipeline().RunId}.",
 						"dataFactoryName": "@{pipeline().DataFactory}",
 						"pipelineName": "@{pipeline().Pipeline}",
-						"receiver": "@{pipeline().parameters.receiver}"
+						"receiver": "@{pipeline().parameters.receptor}"
 					}
 				}
 			}
